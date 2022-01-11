@@ -1,0 +1,6 @@
+html {
+  /* For smooth scrolling in Safari: */
+  --scroll-behavior: smooth;
+  /* Normal CSS property for browsers with native support */
+  scroll-behavior: smooth;
+}

@@ -1,0 +1,40 @@
+.NavBar {
+  background-color: #337bb7 !important;
+}
+
+.Nav {
+  color: #fff !important;
+  font-family: 'PT Serif', serif;
+  font-size: 24px;
+  letter-spacing: 2.5px;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  .NavContainer {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  .NavContainer {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  .NavContainer {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .NavContainer {
+    display: flex !important;
+    justify-content: center !important;
+  }
+}

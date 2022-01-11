@@ -1,0 +1,108 @@
+.OuterContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Header {
+  padding: 1em;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.Container {
+  display: block;
+  padding: 2em;
+}
+
+.ArtistStyle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr 1fr;
+}
+
+.MainCard {
+  margin: 20px;
+}
+
+.Link {
+  margin: 10px;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  background-color: #337bb7;
+  color: #fff;
+  border: 1px solid #337bb7;
+  text-decoration: none;
+}
+
+.Link:hover {
+  background-color: #fff !important;
+  color: #337bb7 !important;
+}
+
+.TopParent {
+  display: flex;
+  justify-content: center;
+}
+
+.TopButton {
+  margin: 2em 0;
+  text-align: center;
+  cursor: pointer;
+  letter-spacing: 1.5px;
+  font-size: 1rem;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  background-color: #337bb7;
+  color: #fff;
+  border: 1px solid #337bb7;
+  text-decoration: none;
+}
+
+.TopButton:hover {
+  background-color: #fff !important;
+  color: #337bb7 !important;
+}
+
+/* ===== MEDIA QUERIES ===== */
+
+@media screen and (min-width: 641px) and (max-width: 768px) {
+  .ArtistStyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 551px) and (max-width: 640px) {
+  .ArtistStyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 471px) and (max-width: 550px) {
+  .ArtistStyle {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 431px) and (max-width: 470px) {
+  .ArtistStyle {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 401px) and (max-width: 430px) {
+  .ArtistStyle {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 100px) and (max-width: 400px) {
+  .ArtistStyle {
+    display: block;
+  }
+}
