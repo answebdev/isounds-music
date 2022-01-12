@@ -4,6 +4,8 @@ import Input from './Input';
 import useDebounce from './utilities/useDebounce';
 import '../App.css';
 
+// Fetching data with Axios: https://www.youtube.com/watch?v=JUiacuYwEvc
+
 export interface IState {
   artists: {
     strArtist: string;
@@ -68,7 +70,7 @@ const Search = () => {
       if (debouncedSearchTerm) {
         setIsSearching(true);
         setIsLoading(true);
-        fetchArtists(debouncedSearchTerm).then((data) => {
+        fetchArtists(debouncedSearchTerm).then((data: any) => {
           setIsSearching(false);
           setIsLoading(false);
           setResults(data);
@@ -102,7 +104,8 @@ const Search = () => {
     if (data.artists) {
       setArtists(data.artists);
       setIsNotFound(false);
-      // console.log(data.artists);
+      console.clear();
+      console.log(data.artists);
     }
 
     if (!data.artists) {

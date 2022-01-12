@@ -71,6 +71,3 @@ const Input: React.FC<IProps> = ({
 };
 
 export default Input;
-// function setSearchTerm(value: string): void {
-//   throw new Error('Function not implemented.');
-// }
