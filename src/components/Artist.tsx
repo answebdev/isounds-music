@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { RouteComponentProps } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
 import smoothscroll from 'smoothscroll-polyfill';
 import Spinner from './misc/Spinner';
@@ -6,16 +7,41 @@ import PlaceholderImg from '../img/no-album-image-available.webp';
 import { Row, Col, Card, Accordion } from 'react-bootstrap';
 import classes from '../styles/Artist.module.css';
 
-// For TS info on 'match', see https://www.youtube.com/watch?v=oQZJxyMoLws (15:00)
+interface RouterProps {
+  id: string;
+}
 
-const Artist = ({ match }) => {
-  const [album, setAlbums] = useState([]);
-  const [isLoading, setIsLoading] = useState(false);
+interface MatchIdProps extends RouteComponentProps<RouterProps> {
+  // Other prop types in component go here, otherwise, just leave empty
+  album: {
+    id: number;
+    strArtist: string;
+    strGenre: string;
+    strAlbumThumb: string;
+    strAlbum: string;
+    intYearReleased: string;
+    strLabel: string;
+    strDescriptionEN: string;
+  }[];
+}
+
+interface LoadingProps {
+  isLoading: boolean;
+}
+
+// For TS info on 'match', see https://www.youtube.com/watch?v=oQZJxyMoLws (15:00) (18:11 code example)
+// Current code soultion: https://www.youtube.com/watch?v=BFELksnCyL0
+
+const Artist: React.FC<MatchIdProps> = ({ match }) => {
+  // const [album, setAlbums] = useState([]);
+  const [album, setAlbums] = useState<MatchIdProps['album']>([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState<LoadingProps['isLoading']>(false);
 
   useEffect(() => {
     fetchAlbums();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [match.params.id]);
 
   const scrollToTop = () => {
     // Polyfill

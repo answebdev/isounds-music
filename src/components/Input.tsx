@@ -2,29 +2,38 @@ import React from 'react';
 import { Row, Col, FormControl, InputGroup } from 'react-bootstrap';
 import classes from '../styles/Input.module.css';
 
-interface ISearchProps {
-  artists: {
-    strArtist: string;
-    strArtistWideThumb: string;
-    strGenre: string;
-    strCountry: string;
-    strWebsite: string;
-    idArtist: string;
-    // Album info:
-    // strAlbumThumb: string;
-    // strAlbum: string;
-    // intYearReleased: string;
-    // strLabel: string;
-    // strDescriptionEN: string;
-  }[];
-  searchTerm: string;
-  isNotFound: boolean;
-  setSearchTerm: string;
+import { ISearchState as Props } from './Search';
+
+// interface ISearchProps {
+//   artists: {
+//     strArtist: string;
+//     strArtistWideThumb: string;
+//     strGenre: string;
+//     strCountry: string;
+//     strWebsite: string;
+//     idArtist: string;
+//     // Album info:
+//     // strAlbumThumb: string;
+//     // strAlbum: string;
+//     // intYearReleased: string;
+//     // strLabel: string;
+//     // strDescriptionEN: string;
+//   }[];
+//   searchTerm: string;
+//   isNotFound: boolean;
+//   setSearchTerm: string;
+// }
+
+interface IProps {
+  // artists: Props['artists'];
+  searchTerm: Props['searchTerm'];
+  isNotFound: Props['isNotFound'];
+  setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
 // const Input = (props) => {
-const Input: React.FC<ISearchProps> = ({
-  artists,
+const Input: React.FC<IProps> = ({
+  // artists,
   searchTerm,
   isNotFound,
   setSearchTerm,
@@ -62,6 +71,6 @@ const Input: React.FC<ISearchProps> = ({
 };
 
 export default Input;
-function setSearchTerm(value: string): void {
-  throw new Error('Function not implemented.');
-}
+// function setSearchTerm(value: string): void {
+//   throw new Error('Function not implemented.');
+// }

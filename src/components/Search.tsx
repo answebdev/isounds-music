@@ -4,7 +4,7 @@ import Input from './Input';
 import useDebounce from './utilities/useDebounce';
 import '../App.css';
 
-interface IState {
+export interface IState {
   artists: {
     strArtist: string;
     strArtistWideThumb: string;
@@ -23,7 +23,7 @@ interface IState {
   isNotFound: boolean;
 }
 
-interface ISearchState {
+export interface ISearchState {
   artists: {
     strArtist: string;
     strArtistWideThumb: string;
@@ -83,7 +83,7 @@ const Search = () => {
   );
 
   // Fetch Artists
-  const fetchArtists = async (searchTerm) => {
+  const fetchArtists = async (searchTerm: any) => {
     // const url = `https://theaudiodb.com/api/v1/json/1/search.php?s=${searchTerm}`;
     const url = `https://theaudiodb.com/api/v1/json/2/search.php?s=${searchTerm}`;
     const response = await fetch(url);
@@ -113,7 +113,7 @@ const Search = () => {
   return (
     <div>
       <Input
-        artists={artists}
+        // artists={artists}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         isNotFound={isNotFound}
