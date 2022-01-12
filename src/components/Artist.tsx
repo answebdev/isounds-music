@@ -12,7 +12,8 @@ interface RouterProps {
 }
 
 interface MatchIdProps extends RouteComponentProps<RouterProps> {
-  // Other prop types in component go here, otherwise, just leave empty
+  // Other prop types from this component go here; otherwise, just leave this empty
+  // Docs: https://www.reactandtypescript.dev/examples/react-router#withrouter
   album: {
     id: number;
     strArtist: string;
