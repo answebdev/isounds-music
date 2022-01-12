@@ -61,6 +61,8 @@ const Search = () => {
   // Debounce search term so that it only gives us the latest value
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
 
+  // TS for API data => see around 11:40 => https://www.youtube.com/watch?v=oQZJxyMoLws
+
   useEffect(
     () => {
       if (debouncedSearchTerm) {

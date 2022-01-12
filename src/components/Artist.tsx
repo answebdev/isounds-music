@@ -6,6 +6,8 @@ import PlaceholderImg from '../img/no-album-image-available.webp';
 import { Row, Col, Card, Accordion } from 'react-bootstrap';
 import classes from '../styles/Artist.module.css';
 
+// For TS info on 'match', see https://www.youtube.com/watch?v=oQZJxyMoLws (15:00)
+
 const Artist = ({ match }) => {
   const [album, setAlbums] = useState([]);
   const [isLoading, setIsLoading] = useState(false);

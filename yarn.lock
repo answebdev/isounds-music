@@ -1808,6 +1808,11 @@
   dependencies:
     "@types/node" "*"
 
+"@types/history@*":
+  "integrity" "sha512-kq1vceWANyZLEt/+hbTWSAjLNhhXYgUw6Ywi0KQ9C7pZJP4Qrr0xjSKb3t59e5GwWtk1L6zt5KTxjH4oPk2l/w=="
+  "resolved" "https://registry.npmjs.org/@types/history/-/history-4.7.10.tgz"
+  "version" "4.7.10"
+
 "@types/html-minifier-terser@^5.0.0":
   "integrity" "sha512-giAlZwstKbmvMk1OO7WXSj4OZ0keXAcl2TQq4LWHiiPH2ByaH7WeUzng+Qej8UPxxv+8lRTuouo0iaNDBuzIBA=="
   "resolved" "https://registry.npmjs.org/@types/html-minifier-terser/-/html-minifier-terser-5.1.1.tgz"
@@ -1897,6 +1902,30 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-helmet@^6.1.5":
+  "integrity" "sha512-/ICuy7OHZxR0YCAZLNg9r7I9aijWUWvxaPR6uTuyxe8tAj5RL4Sw1+R6NhXUtOsarkGYPmaHdBDvuXh2DIN/uA=="
+  "resolved" "https://registry.npmjs.org/@types/react-helmet/-/react-helmet-6.1.5.tgz"
+  "version" "6.1.5"
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-router-dom@^5.3.2":
+  "integrity" "sha512-ELEYRUie2czuJzaZ5+ziIp9Hhw+juEw8b7C11YNA4QdLCVbQ3qLi2l4aq8XnlqM7V31LZX8dxUuFUCrzHm6sqQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-router-dom/-/react-router-dom-5.3.2.tgz"
+  "version" "5.3.2"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+    "@types/react-router" "*"
+
+"@types/react-router@*":
+  "integrity" "sha512-RNSXOyb3VyRs/EOGmjBhhGKTbnN6fHWvy5FNLzWfOWOGjgVUKqJZXfpKzLmgoU8h6Hj8mpALj/mbXQASOb92wQ=="
+  "resolved" "https://registry.npmjs.org/@types/react-router/-/react-router-5.1.17.tgz"
+  "version" "5.1.17"
+  dependencies:
+    "@types/history" "*"
+    "@types/react" "*"
+
 "@types/react-transition-group@^4.4.1":
   "integrity" "sha512-7gAPz7anVK5xzbeQW9wFBDg7G++aPLAFY0QaSMOou9rJZpbuI58WAuJrgu+qR92l61grlnCUe7AFX8KGahAgug=="
   "resolved" "https://registry.npmjs.org/@types/react-transition-group/-/react-transition-group-4.4.4.tgz"
@@ -1924,6 +1953,11 @@
   "integrity" "sha512-hppQEBDmlwhFAXKJX2KnWLYu5yMfi91yazPb2l+lbJiwW+wdo1gNeRA+3RgNSO39WYX2euey41KEwnqesU2Jew=="
   "resolved" "https://registry.npmjs.org/@types/scheduler/-/scheduler-0.16.2.tgz"
   "version" "0.16.2"
+
+"@types/smoothscroll-polyfill@^0.3.1":
+  "integrity" "sha512-+KkHw4y+EyeCtVXET7woHUhIbfWFCflc0E0mZnSV+ZdjPQeHt/9KPEuT7gSW/kFQ8O3EG30PLO++YhChDt8+Ag=="
+  "resolved" "https://registry.npmjs.org/@types/smoothscroll-polyfill/-/smoothscroll-polyfill-0.3.1.tgz"
+  "version" "0.3.1"
 
 "@types/source-list-map@*":
   "integrity" "sha512-K5K+yml8LTo9bWJI/rECfIPrGgxdpeNbj+d53lwN4QjW1MCwlkhUms+gtdzigTeUyBr09+u8BwOIY3MXvHdcsA=="
