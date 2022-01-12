@@ -4,11 +4,34 @@ import Input from './Input';
 import useDebounce from './utilities/useDebounce';
 import '../App.css';
 
+interface IState {
+  artists: {
+    strArtist: string;
+    strArtistWideThumb: string;
+    strGenre: string;
+    strCountry: string;
+    strWebsite: string;
+    idArtist: string;
+    // Album info:
+    // strAlbumThumb: string;
+    // strAlbum: string;
+    // intYearReleased: string;
+    // strLabel: string;
+    // strDescriptionEN: string;
+  }[];
+  isLoading: boolean;
+  isNotFound: boolean;
+}
+
 const Search = () => {
-  const [artists, setArtists] = useState([]);
-  const [searchTerm, setSearchTerm] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const [isNotFound, setIsNotFound] = useState(false);
+  // const [artists, setArtists] = useState([]);
+  // const [isLoading, setIsLoading] = useState(false);
+  // const [isNotFound, setIsNotFound] = useState(false);
+  const [artists, setArtists] = useState<IState['artists']>([]);
+  const [isLoading, setIsLoading] = useState<IState['isLoading']>(false);
+  const [isNotFound, setIsNotFound] = useState<IState['isNotFound']>(false);
+  // const [searchTerm, setSearchTerm] = useState('');
+  const [searchTerm, setSearchTerm] = useState<string | number>('');
 
   // API search results
   const [, setResults] = useState([]);
@@ -56,6 +79,7 @@ const Search = () => {
     if (data.artists) {
       setArtists(data.artists);
       setIsNotFound(false);
+      // console.log(data.artists);
     }
 
     if (!data.artists) {

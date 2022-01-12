@@ -49,6 +49,7 @@ const Artist = ({ match }) => {
     if (data.album) {
       setAlbums(data.album);
       setIsLoading(false);
+      console.log(data.album);
     }
   };
 

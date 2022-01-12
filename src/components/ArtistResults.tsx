@@ -6,20 +6,45 @@ import PlaceholderImg from '../img/no-image-available.webp';
 import classes from '../styles/ArtistResults.module.css';
 import { Row, Col, Card } from 'react-bootstrap';
 
-const ArtistResults = (props) => {
+interface IProps {
+  artists: {
+    strArtist: string;
+    strArtistWideThumb: string;
+    strGenre: string;
+    strCountry: string;
+    strWebsite: string;
+    idArtist: string;
+    // Album info:
+    // strAlbumThumb: string;
+    // strAlbum: string;
+    // intYearReleased: string;
+    // strLabel: string;
+    // strDescriptionEN: string;
+  }[];
+  isLoading: boolean;
+  isNotFound: boolean;
+}
+
+// const ArtistResults = (props) => {
+// const ArtistResults = (props: IProps) => {
+const ArtistResults: React.FC<IProps> = ({
+  artists,
+  isLoading,
+  isNotFound,
+}) => {
   return (
     <div>
       <Helmet>
         <title>iSounds Music | Search Artists</title>
       </Helmet>
 
-      {props.artists.map((artist) => {
+      {artists.map((artist) => {
         return (
           <div className={classes.OuterContainer}>
             <div className={classes.Container}>
               <Row key={artist.idArtist}>
                 <Col md={12}>
-                  {props.isNotFound ? (
+                  {isNotFound ? (
                     <div></div>
                   ) : (
                     <Card className='text-center'>
@@ -75,7 +100,7 @@ const ArtistResults = (props) => {
         );
       })}
 
-      {!props.isLoading ? <div className='text-center'></div> : <Spinner />}
+      {!isLoading ? <div className='text-center'></div> : <Spinner />}
     </div>
   );
 };
