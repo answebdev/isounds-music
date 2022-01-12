@@ -2,7 +2,33 @@ import React from 'react';
 import { Row, Col, FormControl, InputGroup } from 'react-bootstrap';
 import classes from '../styles/Input.module.css';
 
-const Input = (props) => {
+interface ISearchProps {
+  artists: {
+    strArtist: string;
+    strArtistWideThumb: string;
+    strGenre: string;
+    strCountry: string;
+    strWebsite: string;
+    idArtist: string;
+    // Album info:
+    // strAlbumThumb: string;
+    // strAlbum: string;
+    // intYearReleased: string;
+    // strLabel: string;
+    // strDescriptionEN: string;
+  }[];
+  searchTerm: string;
+  isNotFound: boolean;
+  setSearchTerm: string;
+}
+
+// const Input = (props) => {
+const Input: React.FC<ISearchProps> = ({
+  artists,
+  searchTerm,
+  isNotFound,
+  setSearchTerm,
+}) => {
   return (
     <div className={classes.OuterContainer}>
       <div className={classes.Container}>
@@ -13,11 +39,14 @@ const Input = (props) => {
               <FormControl
                 type='text'
                 placeholder='Search Artists'
-                value={props.searchTerm}
-                onChange={(e) => props.setSearchTerm(e.target.value)}
+                value={searchTerm}
+                // onChange={(e) => props.setSearchTerm(e.target.value)}
+                onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
+                  setSearchTerm(e.target.value)
+                }
               />
             </InputGroup>
-            {props.isNotFound ? (
+            {isNotFound ? (
               <div>
                 <p className={classes.ErrorMsg}>
                   Sorry, we couldn't find anything matching your search
@@ -33,3 +62,6 @@ const Input = (props) => {
 };
 
 export default Input;
+function setSearchTerm(value: string): void {
+  throw new Error('Function not implemented.');
+}

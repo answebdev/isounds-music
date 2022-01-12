@@ -23,6 +23,26 @@ interface IState {
   isNotFound: boolean;
 }
 
+interface ISearchState {
+  artists: {
+    strArtist: string;
+    strArtistWideThumb: string;
+    strGenre: string;
+    strCountry: string;
+    strWebsite: string;
+    idArtist: string;
+    // Album info:
+    // strAlbumThumb: string;
+    // strAlbum: string;
+    // intYearReleased: string;
+    // strLabel: string;
+    // strDescriptionEN: string;
+  }[];
+  searchTerm: string;
+  isNotFound: boolean;
+  setSearchTerm: string;
+}
+
 const Search = () => {
   // const [artists, setArtists] = useState([]);
   // const [isLoading, setIsLoading] = useState(false);
@@ -31,7 +51,8 @@ const Search = () => {
   const [isLoading, setIsLoading] = useState<IState['isLoading']>(false);
   const [isNotFound, setIsNotFound] = useState<IState['isNotFound']>(false);
   // const [searchTerm, setSearchTerm] = useState('');
-  const [searchTerm, setSearchTerm] = useState<string | number>('');
+  // const [searchTerm, setSearchTerm] = useState<string>('');
+  const [searchTerm, setSearchTerm] = useState<ISearchState['searchTerm']>('');
 
   // API search results
   const [, setResults] = useState([]);
