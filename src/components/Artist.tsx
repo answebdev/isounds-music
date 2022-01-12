@@ -34,8 +34,8 @@ interface LoadingProps {
 
 const Artist: React.FC<MatchIdProps> = ({ match }) => {
   // const [album, setAlbums] = useState([]);
-  const [album, setAlbums] = useState<MatchIdProps['album']>([]);
   // const [isLoading, setIsLoading] = useState(false);
+  const [album, setAlbums] = useState<MatchIdProps['album']>([]);
   const [isLoading, setIsLoading] = useState<LoadingProps['isLoading']>(false);
 
   useEffect(() => {
