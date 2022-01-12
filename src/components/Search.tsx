@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { IState, ISearchState } from '../common/types';
 import ArtistResults from './ArtistResults';
 import Input from './Input';
 import useDebounce from './utilities/useDebounce';
@@ -6,44 +7,44 @@ import '../App.css';
 
 // Fetching data with Axios: https://www.youtube.com/watch?v=JUiacuYwEvc
 
-export interface IState {
-  artists: {
-    strArtist: string;
-    strArtistWideThumb: string;
-    strGenre: string;
-    strCountry: string;
-    strWebsite: string;
-    idArtist: string;
-    // Album info:
-    // strAlbumThumb: string;
-    // strAlbum: string;
-    // intYearReleased: string;
-    // strLabel: string;
-    // strDescriptionEN: string;
-  }[];
-  isLoading: boolean;
-  isNotFound: boolean;
-}
+// export interface IState {
+//   artists: {
+//     strArtist: string;
+//     strArtistWideThumb: string;
+//     strGenre: string;
+//     strCountry: string;
+//     strWebsite: string;
+//     idArtist: string;
+//     // Album info:
+//     // strAlbumThumb: string;
+//     // strAlbum: string;
+//     // intYearReleased: string;
+//     // strLabel: string;
+//     // strDescriptionEN: string;
+//   }[];
+//   isLoading: boolean;
+//   isNotFound: boolean;
+// }
 
-export interface ISearchState {
-  artists: {
-    strArtist: string;
-    strArtistWideThumb: string;
-    strGenre: string;
-    strCountry: string;
-    strWebsite: string;
-    idArtist: string;
-    // Album info:
-    // strAlbumThumb: string;
-    // strAlbum: string;
-    // intYearReleased: string;
-    // strLabel: string;
-    // strDescriptionEN: string;
-  }[];
-  searchTerm: string;
-  isNotFound: boolean;
-  setSearchTerm: string;
-}
+// export interface ISearchState {
+//   artists: {
+//     strArtist: string;
+//     strArtistWideThumb: string;
+//     strGenre: string;
+//     strCountry: string;
+//     strWebsite: string;
+//     idArtist: string;
+//     // Album info:
+//     // strAlbumThumb: string;
+//     // strAlbum: string;
+//     // intYearReleased: string;
+//     // strLabel: string;
+//     // strDescriptionEN: string;
+//   }[];
+//   searchTerm: string;
+//   isNotFound: boolean;
+//   setSearchTerm: string;
+// }
 
 const Search = () => {
   // const [artists, setArtists] = useState([]);

@@ -1,8 +1,7 @@
 import React from 'react';
 import { Row, Col, FormControl, InputGroup } from 'react-bootstrap';
+import { ISearchState as Props } from '../common/types';
 import classes from '../styles/Input.module.css';
-
-import { ISearchState as Props } from './Search';
 
 // interface ISearchProps {
 //   artists: {
