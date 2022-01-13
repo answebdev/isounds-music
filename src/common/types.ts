@@ -6,12 +6,6 @@ export interface IState {
         strCountry: string;
         strWebsite: string;
         idArtist: string;
-        // Album info:
-        // strAlbumThumb: string;
-        // strAlbum: string;
-        // intYearReleased: string;
-        // strLabel: string;
-        // strDescriptionEN: string;
     }[];
     isLoading: boolean;
     isNotFound: boolean;
@@ -25,12 +19,6 @@ export interface ISearchState {
         strCountry: string;
         strWebsite: string;
         idArtist: string;
-        // Album info:
-        // strAlbumThumb: string;
-        // strAlbum: string;
-        // intYearReleased: string;
-        // strLabel: string;
-        // strDescriptionEN: string;
     }[];
     searchTerm: string;
     isNotFound: boolean;
