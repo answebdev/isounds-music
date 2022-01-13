@@ -18,6 +18,7 @@ Please check out the live link for iSounds Music here: [iSounds Music](https://i
 ## Technologies Used
 
 * React (Hooks)
+* TypeScript
 * React Router
 * React Helmet
 * React Bootstrap
