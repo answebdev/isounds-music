@@ -14,19 +14,11 @@ interface IProps {
     strCountry: string;
     strWebsite: string;
     idArtist: string;
-    // Album info:
-    // strAlbumThumb: string;
-    // strAlbum: string;
-    // intYearReleased: string;
-    // strLabel: string;
-    // strDescriptionEN: string;
   }[];
   isLoading: boolean;
   isNotFound: boolean;
 }
 
-// const ArtistResults = (props) => {
-// const ArtistResults = (props: IProps) => {
 const ArtistResults: React.FC<IProps> = ({
   artists,
   isLoading,

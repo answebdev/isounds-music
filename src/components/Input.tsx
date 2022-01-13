@@ -3,40 +3,13 @@ import { Row, Col, FormControl, InputGroup } from 'react-bootstrap';
 import { ISearchState as Props } from '../common/types';
 import classes from '../styles/Input.module.css';
 
-// interface ISearchProps {
-//   artists: {
-//     strArtist: string;
-//     strArtistWideThumb: string;
-//     strGenre: string;
-//     strCountry: string;
-//     strWebsite: string;
-//     idArtist: string;
-//     // Album info:
-//     // strAlbumThumb: string;
-//     // strAlbum: string;
-//     // intYearReleased: string;
-//     // strLabel: string;
-//     // strDescriptionEN: string;
-//   }[];
-//   searchTerm: string;
-//   isNotFound: boolean;
-//   setSearchTerm: string;
-// }
-
 interface IProps {
-  // artists: Props['artists'];
   searchTerm: Props['searchTerm'];
   isNotFound: Props['isNotFound'];
   setSearchTerm: React.Dispatch<React.SetStateAction<string>>;
 }
 
-// const Input = (props) => {
-const Input: React.FC<IProps> = ({
-  // artists,
-  searchTerm,
-  isNotFound,
-  setSearchTerm,
-}) => {
+const Input: React.FC<IProps> = ({ searchTerm, isNotFound, setSearchTerm }) => {
   return (
     <div className={classes.OuterContainer}>
       <div className={classes.Container}>
@@ -48,7 +21,6 @@ const Input: React.FC<IProps> = ({
                 type='text'
                 placeholder='Search Artists'
                 value={searchTerm}
-                // onChange={(e) => props.setSearchTerm(e.target.value)}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
                   setSearchTerm(e.target.value)
                 }

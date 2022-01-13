@@ -13,7 +13,6 @@ interface RouterProps {
 
 interface MatchIdProps extends RouteComponentProps<RouterProps> {
   // Other prop types from this component go here; otherwise, just leave this empty
-  // Docs: https://www.reactandtypescript.dev/examples/react-router#withrouter
   album: {
     id: number;
     strArtist: string;
@@ -30,12 +29,7 @@ interface LoadingProps {
   isLoading: boolean;
 }
 
-// For TS info on 'match', see https://www.youtube.com/watch?v=oQZJxyMoLws (15:00) (18:11 code example)
-// Current code soultion: https://www.youtube.com/watch?v=BFELksnCyL0
-
 const Artist: React.FC<MatchIdProps> = ({ match }) => {
-  // const [album, setAlbums] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
   const [album, setAlbums] = useState<MatchIdProps['album']>([]);
   const [isLoading, setIsLoading] = useState<LoadingProps['isLoading']>(false);
 

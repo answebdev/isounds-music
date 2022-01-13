@@ -5,56 +5,10 @@ import Input from './Input';
 import useDebounce from './utilities/useDebounce';
 import '../App.css';
 
-// Fetching data with Axios: https://www.youtube.com/watch?v=JUiacuYwEvc
-
-// export interface IState {
-//   artists: {
-//     strArtist: string;
-//     strArtistWideThumb: string;
-//     strGenre: string;
-//     strCountry: string;
-//     strWebsite: string;
-//     idArtist: string;
-//     // Album info:
-//     // strAlbumThumb: string;
-//     // strAlbum: string;
-//     // intYearReleased: string;
-//     // strLabel: string;
-//     // strDescriptionEN: string;
-//   }[];
-//   isLoading: boolean;
-//   isNotFound: boolean;
-// }
-
-// export interface ISearchState {
-//   artists: {
-//     strArtist: string;
-//     strArtistWideThumb: string;
-//     strGenre: string;
-//     strCountry: string;
-//     strWebsite: string;
-//     idArtist: string;
-//     // Album info:
-//     // strAlbumThumb: string;
-//     // strAlbum: string;
-//     // intYearReleased: string;
-//     // strLabel: string;
-//     // strDescriptionEN: string;
-//   }[];
-//   searchTerm: string;
-//   isNotFound: boolean;
-//   setSearchTerm: string;
-// }
-
 const Search = () => {
-  // const [artists, setArtists] = useState([]);
-  // const [isLoading, setIsLoading] = useState(false);
-  // const [isNotFound, setIsNotFound] = useState(false);
   const [artists, setArtists] = useState<IState['artists']>([]);
   const [isLoading, setIsLoading] = useState<IState['isLoading']>(false);
   const [isNotFound, setIsNotFound] = useState<IState['isNotFound']>(false);
-  // const [searchTerm, setSearchTerm] = useState('');
-  // const [searchTerm, setSearchTerm] = useState<string>('');
   const [searchTerm, setSearchTerm] = useState<ISearchState['searchTerm']>('');
 
   // API search results
@@ -63,8 +17,6 @@ const Search = () => {
   const [, setIsSearching] = useState(false);
   // Debounce search term so that it only gives us the latest value
   const debouncedSearchTerm = useDebounce(searchTerm, 500);
-
-  // TS for API data => see around 11:40 => https://www.youtube.com/watch?v=oQZJxyMoLws
 
   useEffect(
     () => {
@@ -115,7 +67,6 @@ const Search = () => {
   return (
     <div>
       <Input
-        // artists={artists}
         searchTerm={searchTerm}
         setSearchTerm={setSearchTerm}
         isNotFound={isNotFound}
