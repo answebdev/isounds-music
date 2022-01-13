@@ -78,7 +78,6 @@ const Artist: React.FC<MatchIdProps> = ({ match }) => {
     if (data.album) {
       setAlbums(data.album);
       setIsLoading(false);
-      console.log(data.album);
     }
   };
 

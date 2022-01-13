@@ -105,8 +105,6 @@ const Search = () => {
     if (data.artists) {
       setArtists(data.artists);
       setIsNotFound(false);
-      console.clear();
-      console.log(data.artists);
     }
 
     if (!data.artists) {
