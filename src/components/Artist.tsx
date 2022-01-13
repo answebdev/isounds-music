@@ -12,7 +12,6 @@ interface RouterProps {
 }
 
 interface MatchIdProps extends RouteComponentProps<RouterProps> {
-  // Other prop types from this component go here; otherwise, just leave this empty
   album: {
     id: number;
     strArtist: string;
