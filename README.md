@@ -23,6 +23,7 @@ Please check out the live link for iSounds Music here: [iSounds Music](https://i
 * React Helmet
 * React Bootstrap
 * The AudioDB API
+* Smoothscroll Polyfill
 * CSS (CSS Modules)
 * Google Fonts
 * Font Awesome
@@ -45,6 +46,34 @@ To prevent API calls from being fired on every keystroke, a debounce custom hook
 In comparison, you can see the improvement in the Network tab when debouncing is used. As you can see, although the same API call is being made (i.e., searching for "david bowie"), the API calls are not executed as frequently as when debouncing is not used. Instead of making API calls with every keystroke, the debounce hook forces the function that is fetching the data to wait a certain amount of time (500ms) before running again. The hook, then, limits the number of times the function is called. As you can see in the Network tab in the example below, this is much more efficient.
 
 ![Screenshot 07](screenshots/withDebouncing.gif "With Debouncing")
+
+### Smoothscroll Polyfill
+
+The Albums page (`Artist.js`) containing all of the artist's albums has a "Back to Top" button with smooth scrolling. It has an `onClick` that calls the `scrollToTop` function, which enables the smooth scrolling behavior to the top of the page:
+
+```
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+```
+
+Still, not all browsers support smooth scrolling (e.g., Safari). To address this, [smoothscroll polyfill](http://iamdustan.com/smoothscroll/ "smooth scroll behavior polyfill") was used so that the smooth scrolling behavior can be used in browsers that do not support smooth scrolling, as in the case with Safari. After installing and importing the polyfill, it was used in `Artist.js`, since this is where the "Back to Top" button is located. The first two lines come from the polyfill documentation and were added inside the `scrollToTop` function, which is called with the `onClick` whenever the "Back to Top" button is clicked:
+
+```
+const scrollToTop = () => {
+  smoothscroll.polyfill();
+  window.scroll({ top: 0, left: 0, behavior: 'smooth' })
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth',
+  });
+};
+```
+
+Before adding these two lines, although the user is able the scroll up in Safari, it would not be a smooth scrolling behavior. However, after adding these lines, the behavior in Safari when clicking the "Back to Top" button is now smooth.
 
 ### Placeholder Images
 Placeholder images were created using Canva to act as placeholders in cases were there are no images provided in the API, specifically images used in the search results and for album covers:
