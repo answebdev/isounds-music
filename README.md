@@ -1,5 +1,7 @@
 # iSounds Music
 
+![Screenshot 13](screenshots/banner.png "iSounds Music")
+
 ![Screenshot 05](screenshots/iSounds_Music.gif "iSounds Music Demo")
 
 ## Description
