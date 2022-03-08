@@ -7,7 +7,7 @@ const Navigation = () => {
     <div>
       <Navbar className={classes.NavBar} bg='dark' expand='lg'>
         <Container className={classes.NavContainer}>
-          <Navbar.Brand href='/' className={classes.Nav}>
+          <Navbar.Brand data-testid='app-name' href='/' className={classes.Nav}>
             <i className='fas fa-headphones'></i> iSounds Music
           </Navbar.Brand>
         </Container>
