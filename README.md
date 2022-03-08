@@ -1,4 +1,4 @@
-# iSounds Music
+# iSounds Music [![End-to-end tests](https://github.com/answebdev/isounds-music/actions/workflows/cy.yaml/badge.svg?branch=main)](https://github.com/answebdev/isounds-music/actions/workflows/cy.yaml)
 
 ![Screenshot 05](screenshots/iSounds_Music.gif "iSounds Music Demo")
 
