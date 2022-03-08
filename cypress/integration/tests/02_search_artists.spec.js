@@ -25,10 +25,6 @@ describe('Second test suite - search functionality', () => {
 
   it('searches for David Bowie', () => {
     cy.get('[data-testid=input]').type('David Bowie');
-    // cy.get('[data-testid=artist-name]')
-    //   .should('have.length', 1)
-    //   .and('contain', 'David Bowie');
-    // This fetches from the API 2x:
     cy.get('[data-testid=artist-name]').should('have.text', 'David Bowie');
 
     cy.get('[data-testid=genre]').should('have.text', 'Genre: Rock');
@@ -44,7 +40,6 @@ describe('Second test suite - search functionality', () => {
     cy.log(
       'Checking that user goes to David Bowie album page after clicking Albums button'
     );
-    //cy.contains('Albums').click();
     cy.get('[data-testid=go-to-albums]').should('have.text', 'Albums').click();
   });
 });
