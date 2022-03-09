@@ -14,6 +14,7 @@ Please check out the live link for iSounds Music here: [iSounds Music](https://i
 * [Technologies Used](#Technologies-Used)
 * [Development](#Development)
 * [Screenshots](#Screenshots)
+* [End-to-End Testing](#End-to-End-Testing)
 
 ## Technologies Used
 
@@ -112,6 +113,11 @@ Again, a ternary operator was used with the imported placeholder image, this tim
 And the resulting album information looks like this:
 
 ![Screenshot 12](screenshots/isoundsmusic-screenshot12.png "Album with Placeholder Image")
+
+[Back To Top](#Table-of-Contents)
+
+## End-to-End Testing
+Here
 
 [Back To Top](#Table-of-Contents)
 
