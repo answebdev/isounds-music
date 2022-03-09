@@ -117,9 +117,9 @@ And the resulting album information looks like this:
 [Back To Top](#Table-of-Contents)
 
 ## E2E Testing
-Cypress was used for end-to-end testing to ensure that the application's complete workflow functions properly. The tests were split up into three suites: endpoints, search functionality, and album details.
+I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. The tests were split up into three suites: endpoints, search functionality, and album details.
 
-In addition, a workflow was created using GitHub actions to automate the testing so that the application always works as expected. Both the `push` and `schedule` events are used. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository, to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
+In addition, I created a workflow using GitHub actions to automate the testing so that the application always works as expected, and so that I would be notified in the event that any of the tests fail. I used both the `push` and `schedule` events. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
 
 https://user-images.githubusercontent.com/36783010/157349665-b69d9bd6-d74a-4189-a41a-8f6782ac7864.mp4
 
