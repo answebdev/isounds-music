@@ -14,7 +14,7 @@ Please check out the live link for iSounds Music here: [iSounds Music](https://i
 * [Technologies Used](#Technologies-Used)
 * [Development](#Development)
 * [Screenshots](#Screenshots)
-* [End-to-End Testing](#End-to-End-Testing)
+* [E2E Testing](#End-to-End-Testing)
 
 ## Technologies Used
 
@@ -116,7 +116,7 @@ And the resulting album information looks like this:
 
 [Back To Top](#Table-of-Contents)
 
-## End-to-End Testing
+## E2E Testing
 Here
 
 [Back To Top](#Table-of-Contents)
