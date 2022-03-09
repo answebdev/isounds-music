@@ -14,7 +14,7 @@ Please check out the live link for iSounds Music here: [iSounds Music](https://i
 * [Technologies Used](#Technologies-Used)
 * [Development](#Development)
 * [Screenshots](#Screenshots)
-* [E2E Testing](#End-to-End-Testing)
+* [E2E Testing](#E2E-Testing)
 
 ## Technologies Used
 
