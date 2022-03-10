@@ -1,0 +1,2 @@
+# change language of repo from Javascript to TypeScript
+    *.js linguist-language=TypeScript
