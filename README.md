@@ -117,7 +117,7 @@ And the resulting album information looks like this:
 [Back To Top](#Table-of-Contents)
 
 ## E2E Testing
-I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. The tests were split up into three suites: endpoints, search functionality, and album details.
+I used Cypress for end-to-end testing to ensure that the application's complete workflow functions properly. The tests were split up into three suites: endpoints, search functionality, and album details. In the first test suite, the endpoints used in the application were tested. In the second and third test suites, all of the features of the application's workflow were tested, such as searching for artists and going to the artist's album page, clicking on the description dropdown for albums, testing the Back To Top button, etc.
 
 In addition, I created a workflow using GitHub Actions to automate the testing so that the application always works as expected, which includes sending out notifications if any of the tests fail. I used both the `push` and `schedule` events. The `push` event is used so that the tests are run whenever any updates to the code are pushed to the respository to help ensure that nothing breaks unintentionally due to code changes. With the `schedule` event, the tests have been scheduled to run automatically once a week, also to help ensure that the application is always working as expected.
 
