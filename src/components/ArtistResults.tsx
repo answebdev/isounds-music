@@ -34,12 +34,12 @@ const ArtistResults: React.FC<IProps> = ({
         return (
           <div className={classes.OuterContainer}>
             <div className={classes.Container}>
-              <Row key={artist.idArtist}>
+              <Row>
                 <Col md={12}>
                   {isNotFound ? (
                     <div></div>
                   ) : (
-                    <Card className='text-center'>
+                    <Card key={artist.idArtist} className='text-center'>
                       <Card.Header>
                         <span
                           data-testid='artist-name'

@@ -39,7 +39,6 @@ const Search = () => {
 
   // Fetch Artists
   const fetchArtists = async (searchTerm: any) => {
-    // const url = `https://theaudiodb.com/api/v1/json/1/search.php?s=${searchTerm}`;
     const url = `https://theaudiodb.com/api/v1/json/${process.env.REACT_APP_API_KEY}/search.php?s=${searchTerm}`;
     const response = await fetch(url);
     const data = await response.json();
