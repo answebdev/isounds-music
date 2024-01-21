@@ -6,7 +6,6 @@ describe('Third test suite - album details', () => {
   });
 
   it('visits the albums page', () => {
-    cy.once('uncaught:exception', () => false);
     cy.url().should('include', '/artist/111444');
     cy.log('Checking that h1 tag has "albums" text');
     cy.get('[data-testid=albums]').should('have.text', 'Albums');
