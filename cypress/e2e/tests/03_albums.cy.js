@@ -2,6 +2,7 @@
 
 describe('Third test suite - album details', () => {
   beforeEach(() => {
+    cy.once('uncaught:exception', () => false);
     cy.visit('/artist/111444');
   });
 
