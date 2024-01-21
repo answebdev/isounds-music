@@ -53,7 +53,7 @@ const Artist: React.FC<MatchIdProps> = ({ match }) => {
     //   match.params.id
     // }`;
     setIsLoading(true);
-    const albumUrl = `https://theaudiodb.com/api/v1/json/${2}/album.php?i=${
+    const albumUrl = `https://cors-anywhere.herokuapp.com/https://theaudiodb.com/api/v1/json/${2}/album.php?i=${
       match.params.id
     }`;
 
