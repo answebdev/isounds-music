@@ -1,9 +1,9 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
+  projectId: "yxu62d",
   video: false,
   e2e: {
-    projectId: "2tsaw8",
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
