@@ -1,6 +1,6 @@
 import { defineConfig } from 'cypress'
 
-export default defineConfig({
+module.exports = defineConfig({
   projectId: "2tsaw8",
   video: false,
   e2e: {
@@ -12,4 +12,4 @@ export default defineConfig({
     baseUrl: 'https://isoundsmusic.netlify.app/',
     excludeSpecPattern: ['**/1-getting-started/*', '**/2-advanced-examples/*'],
   },
-})
+});
