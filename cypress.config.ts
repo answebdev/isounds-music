@@ -1,6 +1,7 @@
 import { defineConfig } from 'cypress'
 
 export default defineConfig({
+  projectId: "2tsaw8",
   video: false,
   e2e: {
     // We've imported your old cypress plugins here.
