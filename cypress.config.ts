@@ -1,9 +1,9 @@
-//import { defineConfig } from 'cypress'
+import { defineConfig } from 'cypress'
 
-module.exports = {
-  projectId: "2tsaw8",
+export default defineConfig({
   video: false,
   e2e: {
+    projectId: "2tsaw8",
     // We've imported your old cypress plugins here.
     // You may want to clean this up later by importing these.
     setupNodeEvents(on, config) {
@@ -12,4 +12,4 @@ module.exports = {
     baseUrl: 'https://isoundsmusic.netlify.app/',
     excludeSpecPattern: ['**/1-getting-started/*', '**/2-advanced-examples/*'],
   },
-}
+})
