@@ -11,6 +11,10 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Setup Node
+        uses: actions/setup-node@v1
+        with:
+          node-version: 18 # but you can do 12-16
       # Install NPM dependencies, cache them correctly
       # and run all Cypress tests
       - name: Cypress run
